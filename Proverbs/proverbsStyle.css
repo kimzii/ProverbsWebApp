@@ -99,6 +99,7 @@ nav{
     flex-wrap: wrap;
     overflow-y: auto;
     text-align: center;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 @media (max-width: 800px) {
