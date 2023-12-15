@@ -1,0 +1,108 @@
+body{
+    margin: 0px;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:0px 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(64, 64, 156); 
+    border: 1px solid gray;
+    box-shadow: 0 0 10px rgb(192, 190, 190);
+    flex-wrap: wrap;
+}
+
+.part1 {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.part2 {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    font-size: 14px;
+}
+
+.home_button, .about_button{
+    padding: 0px 15px;
+    text-decoration: none;
+    color: rgb(64, 64, 156) ;
+    background-color: white;
+}
+
+
+.home_button {
+    border-radius: 5px; 
+}
+
+.flex-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.c-title{
+    display: flex;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 25px;
+    margin-bottom: 0px;
+    color: rgb(64, 64, 156) ;
+}
+
+.c-container{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-wrap: wrap;
+    margin: 3px;
+    max-width: 1000px;
+    width: 100%;
+}
+
+.c-container button {
+    width: 50px;
+    height: 30px;
+    text-align: center;
+    margin: 5px;
+    background-color: white;
+    color: rgb(64, 64, 156);
+    border: 2px solid rgb(64, 64, 156);
+    font-weight: bold;
+    border-radius: 7px;
+}
+
+.c-container button:hover {
+    background-color:rgb(64, 64, 156) ;
+    color: white;
+}
+
+.verse-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    border-radius: 7px;
+    padding: 20px; 
+    overflow-y: auto;
+}
+
+.verse-container p {
+    height: 7%;
+    width: 500px;
+    border: 2px solid rgb(64, 64, 156);
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+    flex-wrap: wrap;
+    overflow-y: auto;
+    text-align: center;
+}
+
+@media (max-width: 800px) {
+    .c-container, .verses {
+      width: 100%; /* Set the width to 100% for smaller screens */
+    }
+}
