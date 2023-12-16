@@ -34,4 +34,32 @@ function generateChapterButtons() {
     });
 }
 
+//search
+const searchInput = document.querySelector(".myInput");
+const container = document.querySelector(".verse-container");
+
+searchInput.addEventListener("input", e => {
+    const value = e.target.value.toLowerCase();
+    console.log(value);
+
+  
+    container.innerHTML = "";
+
+
+    const matchingVerses = data.filter((chapter) => {
+        return chapter.verses.some((verse) => verse.keywords.includes(value));
+    });
+    
+    matchingVerses.forEach((chapter) => {
+        chapter.verses.forEach((verse) => {
+            if (verse.keywords.includes(value)) {
+                const pElement = document.createElement("p");
+                pElement.innerHTML = `<strong>Chapter ${chapter.chapter}, Verse ${verse.verse}:</strong><br>${verse.text}`;
+                container.appendChild(pElement);
+            }
+        });
+    });
+});
+
+
 generateChapterButtons();
